@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { CheckCircle } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '../../types/navigation';
 import { AppButton } from '../../components/common/AppButton';
@@ -41,7 +42,7 @@ export const OrderSuccessScreen: React.FC<Props> = ({ navigation }) => {
       <View style={styles.content}>
         <View style={styles.successCard}>
           <View style={styles.iconContainer}>
-            <Text style={styles.successIcon}>✅</Text>
+            <CheckCircle size={48} color={COLORS.success} />
           </View>
           <Text style={styles.successTitle}>Order successful</Text>
         </View>
@@ -97,9 +98,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: SPACING.lg,
-  },
-  successIcon: {
-    fontSize: 40,
   },
   successTitle: {
     fontSize: FONTS.sizes.xl,

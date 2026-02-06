@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Store, Phone, Package, Calendar } from 'lucide-react-native';
 import { COLORS } from '../../constants/colors';
 import { SPACING } from '../../constants/spacing';
 import { FONTS } from '../../constants/fonts';
@@ -26,13 +27,17 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({
       activeOpacity={0.7}
     >
       <View style={styles.iconContainer}>
-        <Text style={styles.icon}>🏪</Text>
+        <Store size={24} color={COLORS.primary} />
       </View>
       <View style={styles.content}>
         <Text style={styles.name}>{name}</Text>
         {phone && (
           <View style={styles.infoRow}>
-            <Text style={styles.infoIcon}>📞</Text>
+            <Phone
+              size={12}
+              color={COLORS.textSecondary}
+              style={styles.infoIcon}
+            />
             <Text style={styles.phone}>{phone}</Text>
           </View>
         )}
@@ -40,12 +45,14 @@ export const CustomerCard: React.FC<CustomerCardProps> = ({
           <View style={styles.statsRow}>
             {totalOrders !== undefined && (
               <View style={styles.statBadge}>
-                <Text style={styles.statText}>📦 {totalOrders} orders</Text>
+                <Package size={12} color={COLORS.primary} />
+                <Text style={styles.statText}> {totalOrders} orders</Text>
               </View>
             )}
             {lastOrderDate && (
               <View style={styles.statBadge}>
-                <Text style={styles.statText}>📅 {lastOrderDate}</Text>
+                <Calendar size={12} color={COLORS.primary} />
+                <Text style={styles.statText}> {lastOrderDate}</Text>
               </View>
             )}
           </View>
@@ -83,9 +90,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: SPACING.md,
   },
-  icon: {
-    fontSize: 24,
-  },
   content: {
     flex: 1,
   },
@@ -99,10 +103,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: SPACING.xs,
-  },
-  infoIcon: {
-    fontSize: 12,
-    marginRight: SPACING.xs,
+    gap: SPACING.xs,
   },
   phone: {
     fontSize: FONTS.sizes.sm,
@@ -114,6 +115,8 @@ const styles = StyleSheet.create({
     gap: SPACING.xs,
   },
   statBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: COLORS.lightGreen,
     paddingHorizontal: SPACING.sm,
     paddingVertical: 2,

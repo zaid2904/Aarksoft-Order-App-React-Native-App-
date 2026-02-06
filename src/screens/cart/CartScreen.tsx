@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { Package, Trash2 } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, CartItem } from '../../types/navigation';
 import { Header } from '../../components/common/Header';
@@ -54,7 +55,7 @@ export const CartScreen: React.FC<Props> = ({ navigation }) => {
     <View style={styles.cartItem}>
       <View style={styles.imageContainer}>
         <View style={styles.imagePlaceholder}>
-          <Text style={styles.imagePlaceholderText}>📦</Text>
+          <Package size={30} color={COLORS.primary} />
         </View>
       </View>
       <View style={styles.itemContent}>
@@ -87,7 +88,8 @@ export const CartScreen: React.FC<Props> = ({ navigation }) => {
           onPress={() => handleRemove(item.id)}
           activeOpacity={0.7}
         >
-          <Text style={styles.removeButtonText}>🗑 Remove</Text>
+          <Trash2 size={16} color={COLORS.error} />
+          <Text style={styles.removeButtonText}> Remove</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -182,9 +184,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  imagePlaceholderText: {
-    fontSize: 30,
-  },
   itemContent: {
     flex: 1,
   },
@@ -238,6 +237,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   removeButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginTop: SPACING.sm,
   },
   removeButtonText: {

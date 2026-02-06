@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { Home, ClipboardList, User } from 'lucide-react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
@@ -65,21 +66,21 @@ export const MainTabNavigator: React.FC = () => {
         name="Home"
         component={HomeStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>🏠</Text>,
+          tabBarIcon: ({ color }) => <Home size={24} color={color} />,
         }}
       />
       <Tab.Screen
         name="Orders"
         component={OrdersStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>📋</Text>,
+          tabBarIcon: ({ color }) => <ClipboardList size={24} color={color} />,
         }}
       />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>👤</Text>,
+          tabBarIcon: ({ color }) => <User size={24} color={color} />,
         }}
       />
     </Tab.Navigator>

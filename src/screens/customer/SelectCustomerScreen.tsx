@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { MapPin } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 import { AuthStackParamList, Customer } from '../../types/navigation';
@@ -129,7 +130,7 @@ export const SelectCustomerScreen: React.FC<Props> = ({
         <View style={styles.selectedAreaContainer}>
           <View style={styles.selectedAreaContent}>
             <View style={styles.areaIconContainer}>
-              <Text style={styles.areaIcon}>📍</Text>
+              <MapPin size={24} color={COLORS.primary} />
             </View>
             <View style={styles.areaInfo}>
               <Text style={styles.selectedAreaLabel}>Selected Area</Text>
@@ -210,9 +211,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: SPACING.md,
-  },
-  areaIcon: {
-    fontSize: 24,
   },
   areaInfo: {
     flex: 1,

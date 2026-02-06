@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { Package } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 import { OrdersStackParamList, Order } from '../../types/navigation';
@@ -114,7 +115,7 @@ export const OrderDetailsScreen: React.FC<Props> = ({ navigation, route }) => {
         {order.items.map(item => (
           <View key={item.id} style={styles.itemRow}>
             <View style={styles.itemImagePlaceholder}>
-              <Text style={styles.itemImageEmoji}>📦</Text>
+              <Package size={24} color={COLORS.primary} />
             </View>
             <View style={styles.itemInfo}>
               <Text style={styles.itemName}>{item.name}</Text>
@@ -236,9 +237,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: SPACING.md,
-  },
-  itemImageEmoji: {
-    fontSize: 24,
   },
   itemInfo: {
     flex: 1,

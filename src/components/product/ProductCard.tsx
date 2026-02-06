@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { Package } from 'lucide-react-native';
 import { COLORS } from '../../constants/colors';
 import { SPACING } from '../../constants/spacing';
 import { FONTS } from '../../constants/fonts';
@@ -30,7 +31,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <View style={styles.imagePlaceholder}>
-          <Text style={styles.imagePlaceholderText}>📦</Text>
+          <Package size={30} color={COLORS.primary} />
         </View>
       </View>
       <View style={styles.content}>
@@ -85,9 +86,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  imagePlaceholderText: {
-    fontSize: 30,
   },
   content: {
     flex: 1,

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
+import { MapPin } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList, Area } from '../../types/navigation';
 import { Header } from '../../components/common/Header';
@@ -64,7 +65,7 @@ export const SelectAreaScreen: React.FC<Props> = ({ navigation }) => {
       activeOpacity={0.7}
     >
       <View style={styles.areaIconContainer}>
-        <Text style={styles.areaIcon}>📍</Text>
+        <MapPin size={20} color={COLORS.primary} />
       </View>
       <Text style={styles.areaName}>{item.name}</Text>
     </TouchableOpacity>
@@ -130,9 +131,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: SPACING.md,
-  },
-  areaIcon: {
-    fontSize: 20,
   },
   areaName: {
     fontSize: FONTS.sizes.md,

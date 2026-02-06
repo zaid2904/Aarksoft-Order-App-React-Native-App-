@@ -1,5 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import {
+  User,
+  Phone,
+  Mail,
+  Building2,
+  MapPin,
+  LogOut,
+} from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { MainTabParamList } from '../../types/navigation';
 import { AppButton } from '../../components/common/AppButton';
@@ -32,7 +40,7 @@ export const ProfileScreen: React.FC<Props> = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.profileHeader}>
           <View style={styles.avatarContainer}>
-            <Text style={styles.avatarIcon}>👤</Text>
+            <User size={48} color={COLORS.primary} />
           </View>
           <Text style={styles.userName}>Alif Salesman</Text>
           <Text style={styles.userCompany}>Indian Seals</Text>
@@ -41,35 +49,35 @@ export const ProfileScreen: React.FC<Props> = ({ navigation }) => {
         <View style={styles.infoCard}>
           <View style={styles.infoRow}>
             <View style={styles.iconContainer}>
-              <Text style={styles.icon}>📞</Text>
+              <Phone size={20} color={COLORS.primary} />
             </View>
             <Text style={styles.infoText}>985456251</Text>
           </View>
 
           <View style={styles.infoRow}>
             <View style={styles.iconContainer}>
-              <Text style={styles.icon}>✉️</Text>
+              <Mail size={20} color={COLORS.primary} />
             </View>
             <Text style={styles.infoText}>alifsalesman@gmail.com</Text>
           </View>
 
           <View style={styles.infoRow}>
             <View style={styles.iconContainer}>
-              <Text style={styles.icon}>🏢</Text>
+              <Building2 size={20} color={COLORS.primary} />
             </View>
             <Text style={styles.infoText}>Indian sales</Text>
           </View>
 
           <View style={styles.infoRow}>
             <View style={styles.iconContainer}>
-              <Text style={styles.icon}>📍</Text>
+              <MapPin size={20} color={COLORS.primary} />
             </View>
             <Text style={styles.infoText}>Fatepura vadodara</Text>
           </View>
         </View>
 
         <AppButton
-          title="🚪 Logout"
+          title="Logout"
           onPress={handleLogout}
           variant="danger"
           style={styles.logoutButton}
@@ -112,9 +120,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: SPACING.md,
   },
-  avatarIcon: {
-    fontSize: 48,
-  },
   userName: {
     fontSize: FONTS.sizes.xxl,
     fontWeight: '600',
@@ -151,9 +156,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: SPACING.md,
-  },
-  icon: {
-    fontSize: 20,
   },
   infoText: {
     fontSize: FONTS.sizes.md,

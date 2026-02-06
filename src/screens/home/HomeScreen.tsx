@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { ShoppingCart } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 import { HomeStackParamList, Product } from '../../types/navigation';
@@ -146,7 +147,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation, route }) => {
             onPress={() => navigation.navigate('Cart')}
             activeOpacity={0.7}
           >
-            <Text style={styles.cartIcon}>🛒</Text>
+            <ShoppingCart size={24} color={COLORS.primary} />
             {cartItemCount > 0 && (
               <View style={styles.badge}>
                 <Text style={styles.badgeText}>{cartItemCount}</Text>
@@ -217,9 +218,6 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  cartIcon: {
-    fontSize: 24,
   },
   badge: {
     position: 'absolute',

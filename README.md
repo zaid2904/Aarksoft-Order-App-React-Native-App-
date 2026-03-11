@@ -4,14 +4,26 @@ A modern mobile application for managing orders, customers, and inventory. Built
 
 ## Features
 
-- 🔐 **User Authentication** - Secure login system
-- 🏪 **Area & Store Selection** - Choose your preferred location
-- 🏠 **Home Dashboard** - Quick access to products and orders
-- 🛒 **Shopping Cart** - Easy product selection and checkout
-- 👥 **Customer Management** - Select and manage customers
-- 📦 **Order History** - Track all past orders
-- 📋 **Order Details** - View comprehensive order information
-- 👤 **Profile Management** - Manage user settings and preferences
+- **User Authentication** - Secure login system
+- **Area & Store Selection** - Choose your preferred location
+- **Home Dashboard** - Quick access to products and orders
+- **Shopping Cart** - Easy product selection and checkout
+- **Customer Management** - Select and manage customers
+- **Order History** - Track all past orders
+- **Order Details** - View comprehensive order information
+- **Profile Management** - Manage user settings and preferences
+
+## Demo
+
+<div align="center">
+
+<video src="screenshot/AppVideo.mp4" controls width="320">
+  Your browser does not support the video tag.
+</video>
+
+> **Tip:** If the video doesn't play inline, you can [download and watch it here](screenshot/AppVideo.mp4).
+
+</div>
 
 ## Screenshots
 

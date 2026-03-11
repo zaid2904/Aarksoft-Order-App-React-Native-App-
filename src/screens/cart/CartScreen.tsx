@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Package, Trash2 } from 'lucide-react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList, CartItem } from '../../types/navigation';

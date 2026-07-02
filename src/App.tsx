@@ -1,11 +1,11 @@
-import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import React from 'react';
 import { StatusBar } from 'react-native';
-import { RootNavigator } from './navigation/RootNavigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { COLORS } from './constants/colors';
 import { CartProvider } from './context/CartContext';
 import { UserProvider } from './context/UserContext';
-import { COLORS } from './constants/colors';
+import { RootNavigator } from './navigation/RootNavigator';
 
 const App: React.FC = () => {
   return (
@@ -23,3 +23,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+w
